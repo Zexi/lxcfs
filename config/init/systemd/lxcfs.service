@@ -1,8 +1,7 @@
 [Unit]
 Description=FUSE filesystem for LXC
 ConditionVirtualization=!container
-Before=lxc.service
-Documentation=man:lxcfs(1)
+Before=docker.service
 
 [Service]
 ExecStart=/usr/bin/lxcfs /var/lib/lxcfs/
