@@ -4,6 +4,7 @@ ConditionVirtualization=!container
 Before=docker.service
 
 [Service]
+ExecStartPre=/usr/bin/mkdir -p /var/lib/lxcfs
 ExecStart=/usr/bin/lxcfs /var/lib/lxcfs/
 KillMode=process
 Restart=on-failure
